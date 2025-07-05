@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  font-family: helvetica, sans-serif;
+  background: #F7F7F7;
+}
+
+@font-face {
+  font-family: 'helvetica';
+  src: url('./assets/fonts/Helvetica.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'helvetica-bold';
+  src: url('./assets/fonts/Helvetica-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'helvetica-bold-oblique';
+  src: url('./assets/fonts/Helvetica-BoldOblique.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'telugu-sangam-mn';
+  src: url('./assets/fonts/telugu-sangam-mn.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-helvetica: helvetica, "sans-serif";
+  --font-helvetica-bold: helvetica-bold, "sans-serif";
+  --font-helvetica-bold-ob: helvetica-bold-ob, "sans-serif";
+  --font-telugu-sangam: telugu-sangam, "sans-serif";
+}
