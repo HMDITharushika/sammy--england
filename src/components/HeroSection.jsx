@@ -1,46 +1,50 @@
-// import heroimage from "../assets/plane.jpg";
-import heroimage from "../assets/spices-hero.png";
+import heroimage from "../assets/bg-img.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex h-screen mt-32" id="home">
-  {/* Ellipse */}
-  
+    <section
+      className="relative flex flex-col lg:flex-row items-center justify-between min-h-screen pt-24  px-4 lg:px-20 overflow-hidden"
+      id="home"
+    >
+      {/* Content */}
+      <div className="relative z-20 flex flex-col items-start text-black max-w-xl">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+          Discover the <span className="text-[#C51124]">Finest Spices</span>{" "}
+          <br /> at <span className="text-[#D1A249]">Sammy England</span>
+        </h1>
 
-  {/* Image inside ellipse */}
-  <div className="absolute right-0 top-10 lg:top-0 w-[650px] h-[600px] z-10 flex items-center justify-center">
-    <img
-      src={heroimage}
-      alt="Spices"
-      className="w-[400px] h-auto object-contain"
-    />
-  </div>
+        <p className="mt-6 text-base sm:text-lg text-neutral-800">
+          Indulge in the rich flavors of our meticulously sourced black pepper, white pepper, and cinnamon powder — elevating every dish.
+        </p>
 
-  <div className="absolute right-0 top-0 h-[550px] w-[650px] bg-[rgba(204,39,57,0.66)] rounded-l-[50%] rounded-r-none -z-10" />
+        <div className="flex flex-wrap gap-4 mt-8">
+          <a
+            href="#"
+            className="bg-[#D1A249] hover:bg-[#C51124] text-white font-medium py-3 px-6 rounded-md shadow-sm transition-colors"
+          >
+            Shop Now
+          </a>
+          <a
+            href="#"
+            className="border border-[#D1A249] hover:bg-[#5E8F8D] hover:text-white text-black font-medium py-3 px-6 rounded-md transition-colors"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
 
-  {/* Content Section */}
-  <div className="relative z-20 flex flex-col items-start mt-6 lg:mt-20 text-black px-4 lg:px-20 max-w-[50%]">
-    <h1 className="text-4xl sm:text-6xl lg:text-7xl text-left tracking-wide">
-      Discover the Finest <br />
-      <span className="bg-gradient-to-r bg-clip-text font-semibold">
-        Spices at Sammy <br />
-      </span>
-      <span className="bg-gradient-to-r bg-clip-text font-semibold">
-        England
-      </span>
-    </h1>
+      {/* Ellipse with image */}
+      <div className="relative mt-12 lg:mt-0 lg:flex-1 flex justify-center items-center">
+        <div className="relative w-full h-[350px] sm:w-[500px] sm:h-[500px] lg:w-[600px] lg:h-[600px]">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroimage})` }}
+          ></div>
+        </div>
+      </div>
 
-    <p className="mt-10 text-lg text-start text-neutral-900 max-w-4xl">
-      Indulge in the rich flavors of our meticulously sourced black <br /> pepper, white pepper, and cinnamon powder.
-    </p>
-
-    <div className="flex justify-center my-10">
-      <a href="#" className="bg-[#D1A249] py-3 px-4 mx-3 rounded-md text-black">Shop Now</a>
-      <a href="#" className="bg-[rgba(209,162,73,0.59)] py-3 px-4 mx-3 rounded-md border text-black">Learn More</a>
-    </div>
-  </div>
-</section>
-
+      
+    </section>
   );
 };
 

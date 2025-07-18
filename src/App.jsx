@@ -1,29 +1,23 @@
-import HeroSection from "./components/HeroSection";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import BlackPepperPage from "./components/spices/BlackPepper";
+import CinnamonPage from "./components/spices/Cinnamon";
+import WhitePepperPage from "./components/spices/WhitePepper";
 import NavBar from "./components/NavBar";
-import Services from "./components/Services";
-// import Blogs from "./components/Blogs";
 import Footer from "./components/Footer";
-import { Analytics } from "@vercel/analytics/react"
-import Spices from "./components/Spices";
-import AboutUs from "./components/AboutUs";
-import Form from "./components/Form"
-import TestimonialCarousel from "./components/TestimonialCarousel";
 
 const App = () => {
   return (
-    <main className="overflow-y-hidden text-neutral-950 antialiased">
-      <HeroSection />
+    <Router>
       <NavBar />
-      <AboutUs />
-      <Spices />
-      <Services />
-      <TestimonialCarousel />
-      <Form />
-      {/* <Blogs /> */}
-     
-      <Footer />
-      <Analytics />
-    </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/black-pepper" element={<BlackPepperPage />} />
+        <Route path="/cinnamon" element={<CinnamonPage />} />
+        <Route path="/white-pepper" element={<WhitePepperPage />} />
+      </Routes>
+      <Footer/>
+    </Router>
   );
 };
 

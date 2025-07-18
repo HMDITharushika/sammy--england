@@ -9,19 +9,19 @@ const Spices = () => {
     {
       image: image1,
       title: "Black Pepper",
-      borderColor: "border-[#D1A249]",
+      borderColor: "border-[#C51124]",
       link: "/black-pepper",
     },
     {
       image: image2,
       title: "Cinnamon",
-      borderColor: "border-[#A0522D]",
+      borderColor: "border-[#D6AD5F]",
       link: "/cinnamon",
     },
     {
       image: image3,
       title: "White Pepper",
-      borderColor: "border-[#C0C0C0]",
+      borderColor: "border-[#5E8F8D]",
       link: "/white-pepper",
     },
   ];

@@ -2,7 +2,7 @@ import image from "../assets/about-us.png";
 
 const AboutUs = () => {
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-center px-8 lg:px-20 gap-10 py-20 bg-[#F9F9F9]">
+    <section className="flex flex-col lg:flex-row items-center justify-center px-8 lg:px-20 gap-10 bg-[#F9F9F9]">
       {/* Left Side - Image */}
       <div className="w-full lg:w-1/2">
         <img

@@ -1,21 +1,28 @@
 import { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
+import person1 from "../assets/person1.jpg";
+import person2 from "../assets/person2.jpg";
+import person3 from "../assets/person3.jpg";
+
 const testimonials = [
   {
     text: "The spices from Sammy England have completely transformed my cooking. The flavors are so rich and vibrant, it's like a culinary adventure in every dish.",
     name: "John Marc",
     title: "Software Engineer",
+    image: person1,
   },
   {
     text: "Absolutely love the freshness and aroma of these spices. They've become a staple in my kitchen!",
     name: "Lara Thompson",
     title: "Chef",
+    image: person2,
   },
   {
     text: "These spices are unmatched in quality. I use them daily and recommend them to all my friends.",
     name: "David Kim",
     title: "Food Blogger",
+    image: person3,
   },
 ];
 
@@ -43,7 +50,14 @@ const TestimonialCarousel = () => {
         </p>
 
         <div className="mt-8 flex flex-col items-center">
-          <div className="w-16 h-16 bg-gray-200 rounded-full"></div>
+          <div className="w-16 h-16 bg-gray-200 rounded-full">
+            <img
+              src={testimonials[current].image}
+              alt="testimonial person image"
+              className="w-full h-full object-cover rounded-full"
+            />
+
+          </div>
           <p className="mt-4 font-bold">{testimonials[current].name}</p>
           <p className="text-sm">{testimonials[current].title}</p>
         </div>
@@ -67,9 +81,8 @@ const TestimonialCarousel = () => {
           {testimonials.map((_, index) => (
             <div
               key={index}
-              className={`w-3 h-3 rounded-full ${
-                index === current ? "bg-black" : "bg-gray-400"
-              }`}
+              className={`w-3 h-3 rounded-full ${index === current ? "bg-black" : "bg-gray-400"
+                }`}
             ></div>
           ))}
         </div>

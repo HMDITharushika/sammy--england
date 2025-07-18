@@ -1,6 +1,6 @@
 import image1 from "../assets/image1.png";
-import image2 from "../assets/image2.png";
-// import image3 from "../assets/image3.jpg";
+import image2 from "../assets/image2.jpg";
+import image3 from "../assets/image3.png";
 
 import ServiceCard from "./ServiceCard";
 
@@ -19,7 +19,7 @@ const Services = () => {
         "Add a touch of excellence to your dishes with our premium spices.",
     },
     {
-      image: image2,
+      image: image3,
       title: "Discover the World of Exquisite Spices",
       description:
         "Trust in our certifications for quality and authenticity.",
